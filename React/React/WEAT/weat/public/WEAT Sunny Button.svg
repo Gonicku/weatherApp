@@ -1,0 +1,27 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 206 156" width="206" height="156">
+	<title>WEAT Sunny Button</title>
+	<defs>
+		<image  width="6" height="26" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAaAQMAAACuFr/rAAAAAXNSR0IB2cksfwAAAAZQTFRFAAAA/9IAqPEqvwAAAAJ0Uk5TAP9bkSK1AAAAE0lEQVR4nGNgYLBgqCABWjAwAAAXwwrBj3KG2QAAAABJRU5ErkJggg=="/>
+		<image  width="6" height="26" id="img2" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAaAQMAAACuFr/rAAAAAXNSR0IB2cksfwAAAAZQTFRFAAAA/9IAqPEqvwAAAAJ0Uk5TAP9bkSK1AAAAE0lEQVR4nGNgYLBgqCABWjAwAAAXwwrBj3KG2QAAAABJRU5ErkJggg=="/>
+		<image  width="24" height="4" id="img3" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAEAQMAAACurW1bAAAAAXNSR0IB2cksfwAAAAZQTFRFAAAA/9IAqPEqvwAAAAJ0Uk5TAP9bkSK1AAAAEklEQVR4nGOo//+P4f///zAMAFgjC3QVVQDhAAAAAElFTkSuQmCC"/>
+		<image  width="24" height="4" id="img4" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAEAQMAAACurW1bAAAAAXNSR0IB2cksfwAAAAZQTFRFAAAA/9IAqPEqvwAAAAJ0Uk5TAP9bkSK1AAAAEklEQVR4nGOo//+P4f///zAMAFgjC3QVVQDhAAAAAElFTkSuQmCC"/>
+		<image  width="20" height="20" id="img5" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUBAMAAAB/pwA+AAAAAXNSR0IB2cksfwAAABhQTFRFAAAA/9IA/9IA/9IA/9IA/9IA/9IA/9IA7vl4HgAAAAh0Uk5TAHph/wrUEuYik4yhAAAALElEQVR4nGNgEGKAAUZjBRjT1dgIxkw3hgszGSOElQeRsCGMyVQqAPdNCgMA5/oLnKADLNcAAAAASUVORK5CYII="/>
+		<image  width="20" height="20" id="img6" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUBAMAAAB/pwA+AAAAAXNSR0IB2cksfwAAABhQTFRFAAAA/9IA/9IA/9IA/9IA/9IA/9IA/9IA7vl4HgAAAAh0Uk5TAHph/wrUEuYik4yhAAAALElEQVR4nGNgEGKAAUZjBRjT1dgIxkw3hgszGSOElQeRsCGMyVQqAPdNCgMA5/oLnKADLNcAAAAASUVORK5CYII="/>
+		<image  width="20" height="20" id="img7" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUBAMAAAB/pwA+AAAAAXNSR0IB2cksfwAAABhQTFRFAAAA/9IA/9IA/9IA/9IA/9IA/9IA/9IA7vl4HgAAAAh0Uk5TABIKYebUev/DKV8kAAAAMUlEQVR4nGNggAIhGIOB2TUBxjQvL4MJlpcXwwXLDQZOUAQuyKAKF2RggwsyMCTDGADETRbq2S6COQAAAABJRU5ErkJggg=="/>
+		<image  width="20" height="20" id="img8" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUBAMAAAB/pwA+AAAAAXNSR0IB2cksfwAAABhQTFRFAAAA/9IA/9IA/9IA/9IA/9IA/9IA/9IA7vl4HgAAAAh0Uk5TABIKYebUev/DKV8kAAAAMUlEQVR4nGNggAIhGIOB2TUBxjQvL4MJlpcXwwXLDQZOUAQuyKAKF2RggwsyMCTDGADETRbq2S6COQAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+		.s0 { fill: #30d4f9;stroke: #2ab1d0;paint-order:stroke fill markers;stroke-linejoin: round;stroke-width: 6 } 
+		.s1 { fill: #ffd200;stroke: #d4af04;paint-order:stroke fill markers;stroke-linejoin: round;stroke-width: 2 } 
+	</style>
+	<path id="Layer 1" class="s0" d="m3 16c0-7.2 5.8-13 13-13h174c7.2 0 13 5.8 13 13v124c0 7.2-5.8 13-13 13h-174c-7.2 0-13-5.8-13-13z"/>
+	<path id="Circle" class="s1" d="m125.5 104c-17.4 0-31.5-14.1-31.5-31.5 0-17.4 14.1-31.5 31.5-31.5 17.4 0 31.5 14.1 31.5 31.5 0 17.4-14.1 31.5-31.5 31.5z"/>
+	<use id="Sunlines" href="#img1" x="122" y="9"/>
+	<use id="Sunlines copy" href="#img2" x="123" y="108"/>
+	<use id="Sunlines copy 4" href="#img3" x="64" y="70"/>
+	<use id="Sunlines copy 5" href="#img4" x="162" y="72"/>
+	<use id="Sunlines copy 2" href="#img5" x="153" y="100"/>
+	<use id="Sunlines copy 3" href="#img6" x="79" y="26"/>
+	<use id="Layer 2" href="#img7" x="151" y="26"/>
+	<use id="Layer 2 copy" href="#img8" x="77" y="98"/>
+</svg>
