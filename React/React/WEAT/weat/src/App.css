@@ -27,6 +27,13 @@
   font-size: 18px;
 }
 
+.topright
+{
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
 .bottomright
 {
   position: absolute;
@@ -43,6 +50,8 @@
 
 .Locations-bar
 {
+  background-color: #5641d1;
+  border-radius: 30px 30px 0px 0px;
   flex-direction: row;
   display: flex;
   align-items: center;
@@ -52,6 +61,8 @@
 }
 
 .App-header {
+  background-color: #5641d1;
+  border-radius: 0px 0px 30px 30px;
   min-height: 50vh;
   display: flex;
   flex-direction: column;

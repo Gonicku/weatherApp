@@ -24,6 +24,7 @@ function App() {
 
   return (
     <div className="App">
+      <img src='./Settings Dots.svg' className='topright' alt = "Settings Button" width={50} height={50}/>
       <img src='./WEAT Blue Word Logo.svg' className = "WEAT-logo" alt = "logo" />
       <header className='Locations-bar'>
         <b>Toronto</b>
