@@ -29,22 +29,24 @@ const formatCurrentWeather = (data) => {
 
 const formatForecastWeather = (data) => {
     let { timezone, daily, hourly} = data;
+    console.log('Original daily data:', daily);
 
-    daily = data.daily ? daily.slice(1,6).map(d => {
+     daily =  Array.isArray(daily) ? daily.slice(1, 6).map((d) => {
      return {
-         title: formatToLocalTime(d.dt, timezone, 'ccc'),
+        title: formatToLocalTime(d.dt, timezone, 'ccc'),
          temp: d.temp.day,
          icon: d.weather[0].icon
      }
     }): [];
 
-    hourly = data.hourly ? hourly.slice(1,6).map(d => {
+     hourly = Array.isArray(hourly) ? hourly.slice(1, 6).map(d => {
      return {
          title: formatToLocalTime(d.dt, timezone, 'hh:mm a'),
          temp: d.temp,
          icon: d.weather[0].icon
      }
     }): [];
+    console.log('Processed daily data:', daily);
 
     return {timezone, daily, hourly};
 };
