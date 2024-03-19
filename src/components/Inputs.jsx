@@ -17,7 +17,7 @@ function Inputs({setQuery, units, setUnits}) {
 
   const handleLocationClick = () => {
     if (navigator.geolocation) {
-      toast.info('Fetching users location');
+      const toast = toast.info('Fetching users location');
       navigator.geolocation.getCurrentPosition((position) => {
         toast.success("Location fetched!");
         let lat = position.coords.latitude;

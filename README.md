@@ -1,6 +1,12 @@
 # WeatherApp
 Cosc 4P02 Project.
 
+*****
+
+Project Progress: https://weather-app-4p02.netlify.app
+
+*****
+
 Project: Weather App
 Team Name: Rockstar Coders Members: Harman Barpaga 7092620 Hamza Chaudhry 6792238 Mathew Berger 6724009 Duncan McDonald 7006232 Matt Slyzys 6881361
 
