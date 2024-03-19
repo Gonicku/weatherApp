@@ -8,9 +8,10 @@ import TemperatureAndDetails from './components/TemperatureAndDetails';
 import Forecast from './components/Forecast';
 import getFormattedWeatherData from './components/services/weatherService';
 import { useEffect, useState } from 'react';
+
 function App() {
   
-  const [query, setQuery] = useState ({q: 'Toronto'})
+  const [query, setQuery] = useState ({q: 'Niagara Falls'})
   const [units, setUnits] = useState ('metric')
   const [weather, setWeather] = useState(null)
 
