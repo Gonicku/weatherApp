@@ -37,7 +37,7 @@ fetchWeather();
 
  const formatBackground = () => {
   if(!weather) return 'from-cyan-700 to-blue-700'
-  const threshold = units === 'metric' ? 20 : 60 
+  const threshold = units === 'metric' ? 20 : 65
   if(weather.temp <= threshold) return 'from-cyan-700 to-blue-700'
 
   return 'from-yello-700 to-orange-700'
