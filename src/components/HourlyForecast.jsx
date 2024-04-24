@@ -3,6 +3,7 @@ import { iconUrlFromCode } from './services/weatherService'
 
 function HourlyForecast({ title, items }) {
     const [page, setPage] = useState(1)
+    const [prevData, setData] = useState(items)
 
     const previousPage = () => {
         if (page > 1) setPage(page - 1)
@@ -13,6 +14,10 @@ function HourlyForecast({ title, items }) {
     }
 
     function pageStart() {
+        if (items != prevData) {
+            setData(items)
+            setPage(1)
+        }
         return page * 7 > 48 ? 41 : page * 7 - 7
     }
 

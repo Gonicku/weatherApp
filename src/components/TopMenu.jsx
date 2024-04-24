@@ -18,9 +18,11 @@ function TopMenu() {
     ]
     return (
         <div className="flex items-center justify-around my-6">
-            <Link id="Logo" className="font-medium" to="/">
-                <img src="" alt="WEAT"></img>
-            </Link>
+            <div className='w-10'>
+                <Link id="Logo" className="font-medium" to="/">
+                    <img src={require("../logo.jpg")} alt="WEAT"></img>
+                </Link>
+            </div>
             <Link id="Weather" className="font-medium" to='/'>Weather</Link>
             <Link id="Mapping" className="font-medium" to='/Mapping'>Mapping</Link>
         </div>
