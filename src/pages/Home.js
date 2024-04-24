@@ -10,63 +10,65 @@ import getFormattedWeatherData from '../components/services/weatherService';
 import { useEffect, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import TopMenu from '../components/TopMenu';
+import HourlyForecast from '../components/HourlyForecast';
 
 function App() {
-  
-  const [query, setQuery] = useState ({q: 'Niagara Falls'})
-  const [units, setUnits] = useState ('metric')
+
+  const [query, setQuery] = useState({ q: 'Niagara Falls' })
+  const [units, setUnits] = useState('metric')
   const [weather, setWeather] = useState(null)
 
   useEffect(() => {
-    const fetchWeather = async ( )=> {
+    const fetchWeather = async () => {
       const message = query.q ? query.q : "current location."
 
       toast.info('Fetching weather for ' + message);
 
-       await  getFormattedWeatherData({...query, units}).then(
+      await getFormattedWeatherData({ ...query, units }).then(
         (data) => {
 
           toast.success(`Successfully fetched weather for ${data.name}, ${data.country}.`);
 
           setWeather(data);
         });
-     
-};
-fetchWeather();
+
+    };
+    fetchWeather();
   }, [query, units]);
 
- const formatBackground = () => {
-  if(!weather) return 'from-cyan-700 to-blue-700'
-  const threshold = units === 'metric' ? 20 : 65
-  if(weather.temp <= threshold) return 'from-cyan-700 to-blue-700'
+  const formatBackground = () => {
+    if (!weather) return 'from-cyan-700 to-blue-700'
+    const threshold = units === 'metric' ? 20 : 68
+    if (weather.temp <= threshold) return 'from-cyan-700 to-blue-700'
 
-  return 'from-yello-700 to-orange-700'
- } 
+    return 'from-yello-700 to-orange-700'
+  }
 
 
   return (
     <div className={`mx-auto max-w-screen-md mt-4 py-5 px-32
      bg-gradient-to-br from-cyan-700 to-blue-700 h-fit shadow-xl shadow-gray-400 ${formatBackground()}`}>
-    <TopButtons setQuery = {setQuery} />
-    <Inputs setQuery = {setQuery} units={units} setUnits = {setUnits}/>
+      <TopMenu></TopMenu>
+      <TopButtons setQuery={setQuery} />
+      <Inputs setQuery={setQuery} units={units} setUnits={setUnits} />
 
-     {weather && (
-      <div>
-       <TimeAndLocation weather = {weather}/>
-       <TemperatureAndDetails weather ={weather} />
+      {weather && (
+        <div>
+          <TimeAndLocation weather={weather} />
+          <TemperatureAndDetails weather={weather} />
 
-       <Forecast title="hourly" items={weather.hourly}/>
-       <Forecast title="daily" items={weather.daily}/>
-      </div> 
-     )}
-
-
-   <ToastContainer autoClose={2000} theme='colored' newestOnTop={true}
-   />
+          <HourlyForecast title="hourly" items={weather.hourly} />
+          <Forecast title="daily" items={weather.daily} />
+        </div>
+      )}
 
 
-    </div>
-  );
+      <ToastContainer autoClose={2000} theme='colored' newestOnTop={true}
+      />
+
+
+    </div>);
 }
 
 export default App;

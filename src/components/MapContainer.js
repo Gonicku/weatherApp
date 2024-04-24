@@ -8,7 +8,7 @@ const MapContainer = () => {
   const [response, setResponse] = useState(null);
   const [startWeather, setStartWeather] = useState(null);
   const [endWeather, setEndWeather] = useState(null);
-  const [mapCenter, setMapCenter] = useState({lat: 43.6532, lng: -79.3832});// Default center (Toronto)})
+  const [mapCenter, setMapCenter] = useState({ lat: 43.6532, lng: -79.3832 });// Default center (Toronto)})
   const [markers, setMarkers] = useState([]);
 
   const handleFormSubmit = (e) => {
@@ -74,51 +74,53 @@ const MapContainer = () => {
   };
 
   return (
-    <div style={{ textAlign: 'center' }}>
+    <div className="my-6">
       <form onSubmit={handleFormSubmit}>
-        <label>
-          Start:
+        <label>Start
+          <br />
           <input
+            className='text-black'
             type="text"
             value={origin}
             placeholder="Enter a starting address..."
             onChange={(e) => setOrigin(e.target.value)}
-            required
-          />
+            required />
         </label>
         <br />
-        <label>
-          Destination:
+        <br />
+        <label>Destination
+          <br />
           <input
+            className='text-black'
             type="text"
             value={destination}
             placeholder="Enter a destination..."
             onChange={(e) => setDestination(e.target.value)}
-            required
-          />
+            required />
         </label>
+        <br />
         <br />
         <button type="submit">Get Directions</button>
       </form>
-      <div style={{ margin: '0 auto', height: '500px', width: '70%', marginBottom: '20px', marginTop: '20px'}}>
+      <div style={{ margin: '0 auto', height: '500px', width: '70%', marginBottom: '20px', marginTop: '20px' }}>
         <GoogleMap
           mapContainerStyle={{ height: '100%', width: '100%' }}
           zoom={10}
-          center={mapCenter} 
+          center={mapCenter}
         >
           {response && <DirectionsRenderer directions={response} />}
         </GoogleMap>
       </div>
       {/* Display weather for start and end locations */}
       {startWeather && endWeather && (
-    <div style={{ textAlign: 'center' }}>
-            <p>Trip Length: {response.routes[0].legs[0].distance.text}</p>
-            <p>Trip Duration: {response.routes[0].legs[0].duration.text}</p>
-            <p>Weather at Start Location: {startWeather.current.temp}°C</p>
-            <p>Feels Like: {startWeather.current.feels_like}°C</p>
-            <p>{startWeather.current.weather.main}</p>
-            <p>Weather at End Location: {endWeather.current.temp}°C</p>
-            <p>Feels Like: {endWeather.current.feels_like}°C </p>
+        <div style={{ textAlign: 'center' }}>
+          <p>Trip Length: {response.routes[0].legs[0].distance.text}</p>
+          <p>Trip Duration: {response.routes[0].legs[0].duration.text}</p>
+          <p>Weather at Start Location: {startWeather.current.temp}°C</p>
+          <p>Feels Like: {startWeather.current.feels_like}°C</p>
+          <p>{startWeather.current.weather.main}</p>
+          <p>Weather at End Location: {endWeather.current.temp}°C</p>
+          <p>Feels Like: {endWeather.current.feels_like}°C </p>
         </div>
       )}
     </div>
@@ -126,4 +128,3 @@ const MapContainer = () => {
 };
 
 export default MapContainer;
- 

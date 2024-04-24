@@ -6,12 +6,12 @@ import Home from "./pages/Home";
 
 
 function App() {
-  
+
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home/>}/> 
-        <Route path="/Mapping" element={<Mapping/>}/>
+        <Route path="/" element={<Home />} />
+        <Route path="/Mapping" element={<Mapping />} />
       </Routes>
     </Router>
   )
